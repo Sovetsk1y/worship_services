@@ -1,8 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
-import 'package:worhip_service/utils/svg_paths.dart';
+import '../../utils/assets_paths.dart';
 
 class RootTabBar extends StatelessWidget implements PreferredSizeWidget {
   final int currentPage;
@@ -44,7 +43,7 @@ class RootTabBar extends StatelessWidget implements PreferredSizeWidget {
     return SizedBox(
       height: preferredHeight,
       child: Center(
-        child: SizedBox(
+        child: Container(
           height: selectedHeight,
           child: Row(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -60,7 +59,7 @@ class RootTabBar extends StatelessWidget implements PreferredSizeWidget {
                           curve: Curves.linearToEaseOut,
                           height: _sideSize(index),
                           width: _sideSize(index),
-                          child: SvgPicture.asset(
+                          child: Image.asset(
                             iconPaths[index],
                             height: _sideSize(index),
                             width: _sideSize(index),
