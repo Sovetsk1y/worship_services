@@ -11,7 +11,7 @@ class AppScrollBehavior extends MaterialScrollBehavior {
       };
 }
 
-main(List<String> args) {
+main() {
   runApp(App());
 }
 
