@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:worhip_service/utils/assets_paths.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:worhip_service/utils/svg_paths.dart';
 
 class MyProfilePage extends StatelessWidget {
   const MyProfilePage({Key? key}) : super(key: key);
@@ -11,8 +12,8 @@ class MyProfilePage extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          Image.asset(
-            man1Big,
+          SvgPicture.asset(
+            man1,
             width: MediaQuery.of(context).size.width,
           )
         ],

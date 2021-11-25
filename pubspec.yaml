@@ -41,11 +41,16 @@ dependencies:
   dio: ^4.0.0
   dart_ipify: ^1.1.1
   # json_serializable: ^5.0.0
+  webview_flutter: ^2.0.13
   html: ^0.15.0
+
+  # Payments
+  cloudpayments: ^0.3.0
 
   # UI
   google_fonts: ^2.1.0
   cupertino_icons: ^1.0.2
+  flutter_svg: ^0.23.0+1
   mask_text_input_formatter: ^2.0.0
   modal_bottom_sheet: ^2.0.0
   expandable: ^5.0.1
@@ -76,21 +81,7 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - assets/root_tab_bar/song_lib/song_lib.png
-    - assets/root_tab_bar/song_lib/2.0x/song_lib.png
-    - assets/root_tab_bar/song_lib/3.0x/song_lib.png
-    - assets/root_tab_bar/my_profile/my_profile.png
-    - assets/root_tab_bar/my_profile/2.0x/my_profile.png
-    - assets/root_tab_bar/my_profile/3.0x/my_profile.png
-    - assets/root_tab_bar/my_schedule/my_schedule.png
-    - assets/root_tab_bar/my_schedule/2.0x/my_schedule.png
-    - assets/root_tab_bar/my_schedule/3.0x/my_schedule.png
-    - assets/illustrations/avatars_big/man1/man1.png
-    - assets/illustrations/avatars_big/man1/2.0x/man1.png
-    - assets/illustrations/avatars_big/man1/3.0x/man1.png
-    - assets/illustrations/empty_list_man/empty_list_man.png
-    - assets/illustrations/empty_list_man/2.0x/empty_list_man.png
-    - assets/illustrations/empty_list_man/3.0x/empty_list_man.png
+    - assets/
     - google_fonts/
 
   # An image asset can refer to one or more resolution-specific "variants", see

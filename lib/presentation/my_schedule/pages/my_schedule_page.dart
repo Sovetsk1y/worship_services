@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:worhip_service/presentation/core/big_title_container.dart';
 import 'package:worhip_service/presentation/root_tab_bar/root_tab_bar.dart';
 import 'package:worhip_service/utils/colors.dart';
-import 'package:worhip_service/utils/assets_paths.dart';
+import 'package:worhip_service/utils/svg_paths.dart';
 import 'package:worhip_service/utils/text_styles.dart';
 
 class MySchedulePage extends StatelessWidget {
@@ -28,7 +29,7 @@ class MySchedulePage extends StatelessWidget {
             firstLineText: 'моё',
             secondLineText: 'расписание',
           ),
-          Image.asset(emptyListMan),
+          SvgPicture.asset(emptyListMan),
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: Text(
