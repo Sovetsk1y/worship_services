@@ -40,12 +40,7 @@ dependencies:
   # Network
   dio: ^4.0.0
   dart_ipify: ^1.1.1
-  # json_serializable: ^5.0.0
-  webview_flutter: ^2.0.13
   html: ^0.15.0
-
-  # Payments
-  cloudpayments: ^0.3.0
 
   # UI
   google_fonts: ^2.1.0
