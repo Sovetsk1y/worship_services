@@ -13,15 +13,39 @@ class RootTabBarPage extends StatefulWidget {
   State<RootTabBarPage> createState() => _RootTabBarPageState();
 }
 
-class _RootTabBarPageState extends State<RootTabBarPage> {
-  final pages = [
-    MyProfilePage(),
-    MySchedulePage(),
-    SongLibraryPage(),
-  ];
+class _RootTabBarPageState extends State<RootTabBarPage>
+    with SingleTickerProviderStateMixin {
+  late final List<Widget> pages;
+
+  final _songLibraryScrollController = ScrollController();
+  double _songLibraryOffset = 0;
 
   int _currentPage = 1;
   final _pageController = PageController(initialPage: 1);
+
+  @override
+  void initState() {
+    super.initState();
+
+    _initFields();
+    _initListeners();
+  }
+
+  void _initFields() {
+    pages = [
+      MyProfilePage(),
+      MySchedulePage(),
+      SongLibraryPage(scrollController: _songLibraryScrollController),
+    ];
+  }
+
+  void _initListeners() {
+    _songLibraryScrollController.addListener(() {
+      setState(() {
+        _songLibraryOffset = _songLibraryScrollController.offset;
+      });
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -35,6 +59,7 @@ class _RootTabBarPageState extends State<RootTabBarPage> {
             onPageChanged: (index) {
               setState(() {
                 _currentPage = index;
+                _songLibraryOffset = 0;
               });
             },
             itemBuilder: (context, index) => pages[index],
@@ -42,6 +67,7 @@ class _RootTabBarPageState extends State<RootTabBarPage> {
           RootTabBar(
             currentPage: _currentPage,
             blurred: _currentPage == 0,
+            currentOffset: _songLibraryOffset,
             onPageChanged: (page) {
               _pageController.animateToPage(
                 page,
@@ -50,6 +76,7 @@ class _RootTabBarPageState extends State<RootTabBarPage> {
               );
               setState(() {
                 _currentPage = page;
+                _songLibraryOffset = 0;
               });
             },
           ),

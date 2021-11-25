@@ -1,6 +1,7 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_chord/flutter_chord.dart';
+import 'package:worhip_service/dependency_injector.dart';
 import 'package:worhip_service/presentation/root_tab_bar/root_tab_bar_page.dart';
 
 class AppScrollBehavior extends MaterialScrollBehavior {
@@ -12,6 +13,7 @@ class AppScrollBehavior extends MaterialScrollBehavior {
 }
 
 main() {
+  configureDependencies();
   runApp(App());
 }
 

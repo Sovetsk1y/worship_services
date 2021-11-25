@@ -21,3 +21,15 @@ final emptyListStyle = GoogleFonts.montserrat(
   fontSize: 21,
   color: black1,
 );
+
+final textFieldPlaceholder = GoogleFonts.montserrat(
+  fontWeight: FontWeight.w500,
+  fontSize: 21,
+  color: black2,
+);
+
+final extraBold17 = GoogleFonts.montserrat(
+  fontWeight: FontWeight.w800,
+  fontSize: 17,
+  color: black2,
+);
